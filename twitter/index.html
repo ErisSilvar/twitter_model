@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter | Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .pagina_principal {
+            background-color: rgba(0, 0, 0, 0.11);
+            border: 2px solid rgba(0, 0, 0, 0.068);
+            padding: 10px;
+            margin: auto;
+            max-width: 800px; 
+        }
+
+        .postagem {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .postagem img {
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 60px; 
+            height: 60px;
+        }
+
+        .postagem_user {
+            margin-top: 0;
+        }
+
+        .publicacao {
+            margin-top: 10px;
+        }
+
+        .icones_postagem {
+            margin-top: 10px;
+        }
+
+        .icones_postagem img {
+            margin-right: 10px;
+            width: 24px; 
+            height: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .postagem img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .icones_postagem img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .postagem img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .icones_postagem img {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pagina_principal"> 
+        <div class="postagem">
+            <img src="imgs/batata_perfil.png" alt="foto de perfil">
+            <div>
+                <div class="postagem_user">
+                    <p>Batata <a href="#">@batata_evil</a></p>
+                </div>
+                <div class="publicacao">
+                    Fui Cancelado!!
+                </div>
+                <div class="icones_postagem">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANlJREFUSEvt1bFtwkAYhuGHMisQCSlCgqzBBLSsQB2aNNShiVJmBCbIAIxAAR0iEmIFGiLgpJxkLIdzsKiwGxfn/33t706fG258NW7MlxX08YbnitIlRvgKnKxgg8eK8Di+QjsvOPyuVo3tjJOF1YKYfx1R8iDXEd1zRN9o/RFArJQePtFJBLXGU77sQl1P0C0YbuIdg+QOMMdrUV0XzcYzvTvJHxDuY3xgX0J29j+4JAhrU7xgWwYcn0l1f/iCBYaY/QdcVhDeOMTxcw08v8nXMi7OpSKqLD0CklUxGTEyAQkAAAAASUVORK5CYII="/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPJJREFUSEvtlD0KwkAQRl8Kr2DhHUSwUhDRw/jTeCC19CCKWIiNhYcQtLFXUAZ2ZVmzOxtEYpFtNoSZefNNvkzGj0/24/pUAHXCpY1oZFpbOi0+lXY3wNCPyVPQAbYmsA/szbMGkLCPev6LOnAC5JZzAZrmjgmw8CigZjoXBe4RBaLkHiEkAebAOFBkAUy+Bbj5wY4CkCQFfweQsVk7+8Jk3NNcW3mWjP2IYgoxQNurfgB61hShAqnfoAEcHVufgRZwtVANEPO+zRVb74AH0DXAd14IsAYGympwc2fADVilrAp1QxYJKG2bFmkyGlspUEf5ApB5Jxly46MkAAAAAElFTkSuQmCC"/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAehJREFUSEvV1MvLTWEYBfDfF5kiRK6lMFCSgUsuSWJKMVBymbiM/CtGLhlhQlEMzMj9UlIMFCkRBi6lpAwIe329R+ds+5yz++pL3jqdwbvftZ71POtZI8b5jIwzvn9GsBvbsQq/cAfncako3oH81jJa5ANcwLl6R+oKZuAstvZpXYgmYWWf+yvYj4+d+26CCbiNNfiAg7iHH9iAU5heHgbgAG5hYrk/gWkFYyN+5ttugkM4js9Yhre1KufiamnZZryr3c+v2voEU7AXZ+oEj7AC+3B6jO6KqpO4iajoUfC9yE0lb8ZIsBjP8R6z+hHMa2hPW74leFbeB6dHwX2sxp7ipLag3d8dxjFcxrY6wZFqQEfxqfL78oYhDiOcg6eYXP3vLHvRoyD+jooM+gXWl14OA879zGLPRdW7a9VixmWjp75oGUwckGG1JUnl1xHwDDg7kz1qJOhUkwVbWM3jZXlQ93znfcDvYkEBX1da/Ed1v7CL5CiJK16XzKmTdIOn9/F95tdzBqVpYiHZ00TSDf64ioxNJQH+mtewuA7JDSztUpLsibq05WEZ6Jd+ThhGkHdTC0ny6VVJ09nFcVvwdZDN2hB0SJK0UZITEyTSB4I32XRQMVFyEWnHLnxrsyBtFbTBavzm/yf4DTBuXhlUYzevAAAAAElFTkSuQmCC"/>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAH9JREFUSEvt07EJQmEMhdHzprAQBHEgl7FxA3EgxxEFC0ewU5RU4k9I8SqTKlySe+Ejmcxc08z+OiAl3Ij+FNEWBzyxwyk4VPXP2q8rumEZpmdsor9jUdCHAVeswuiCdfRVfRjwRnHEA/svRBV9GJCeXmWgPzml1YgaUUogHXgBgiQeGSYuyzUAAAAASUVORK5CYII="/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
